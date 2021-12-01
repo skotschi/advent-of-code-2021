@@ -8,7 +8,7 @@ do {
 
     // Wenn mein letzter Messwert größer war als der vorherige, erhöhe ich das Ergebnis um 1
     var result = 0
-    var lastMeasurement = 0
+    var lastMeasurement = measurements[0]
     
     for measurement in measurements {
         print("measurement:\(measurement), lastMeasurement:\(lastMeasurement)")
