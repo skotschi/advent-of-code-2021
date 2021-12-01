@@ -1,28 +1,5 @@
 import Foundation
 
-// Import in array konvertieren
-
-//var measurements : [Int]
-//
-//do {
-//    guard let fileUrl = Bundle.main.url(forResource: "input", withExtension: "txt") else { fatalError() }
-//    let text = try String(contentsOf: fileUrl, encoding: String.Encoding.utf8)
-//    measurements = (text.components(separatedBy: "\n")).map {Int($0)!}
-//    var lastMeasurement = 0
-//    var result = 0
-//    for value in measurements {
-//        print("Value:\(value), lastMeasurement:\(lastMeasurement)")
-//        if value > lastMeasurement{
-//            result = result + 1
-//        }
-//        lastMeasurement = value
-//    }
-//    print(result)
-//
-//} catch {
-//    print(error)
-//}
-
 // Text Datei in Array von Zahlen konvertieren
 do {
     guard let fileUrl = Bundle.main.url(forResource: "input", withExtension: "txt") else { fatalError() }
@@ -44,5 +21,3 @@ do {
 } catch {
     print(error)
 }
-
-
