@@ -15,7 +15,7 @@ do {
         switch step[0] {
         case "forward":
             xPosition = xPosition + Int(step[1])!
-            yPosition = aim * Int(step[1])!
+            zPosition = zPosition + (aim * Int(step[1])!)
         case "up":
             aim = aim - Int(step[1])!
         case "down":
@@ -23,6 +23,7 @@ do {
         default:
             break
         }
+        print("xPosition:\(xPosition), zPosition\(zPosition)")
         print("Solution 1: \(zPosition*xPosition)")
     }
 }
