@@ -20,11 +20,7 @@ var epsilonRate : [String] = Array(repeating: "0", count: input[0].count)
 
 // Gamme Rate: Die häufigste Zahl an der jeweiligen Stelle im Array
 // Epsilon Rate: Die seltenere Zahl an der jeweiligen Stelle
-// Länge des Arrays - Zahl der 1er > len/2 ->
-
-
-// Wie viele 1er gibt es an der jeweiligen Stelle des Arrays?
-
+//1er an der jeweiligen Stelle zählen
 var count = Array(repeating: 0, count: input[0].count)
 for value in input {
     for (index, checkValue) in value.enumerated(){
@@ -38,6 +34,7 @@ for value in input {
     print(count)
 }
 
+//Kommt die 1 an der Stelle häufiger als die Gesamtlänge des Arrays vor? Wenn ja, muss Gamma eine 1 sein und umgekehrt.
 for (index, value) in count.enumerated() {
     (value > (input.count / 2)) ? (gammaRate[index] = "1") : (gammaRate[index] = "0")
     (value > (input.count / 2)) ? (epsilonRate[index] = "0") : (epsilonRate[index] = "1")
