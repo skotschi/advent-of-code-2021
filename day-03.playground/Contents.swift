@@ -31,7 +31,6 @@ for value in input {
             break
         }
     }
-    print(count)
 }
 
 //Kommt die 1 an der Stelle häufiger als die Gesamtlänge des Arrays vor? Wenn ja, muss Gamma eine 1 sein und umgekehrt.
@@ -39,8 +38,6 @@ for (index, value) in count.enumerated() {
     (value > (input.count / 2)) ? (gammaRate[index] = "1") : (gammaRate[index] = "0")
     (value > (input.count / 2)) ? (epsilonRate[index] = "0") : (epsilonRate[index] = "1")
 }
-print(gammaRate)
-print(epsilonRate)
 
 let powerConsumption = Int(gammaRate.joined(), radix: 2)! * Int(epsilonRate.joined(), radix: 2)!
 print("Power Consumption:\(powerConsumption)")
