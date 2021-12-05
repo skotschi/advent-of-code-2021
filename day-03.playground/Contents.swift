@@ -41,3 +41,21 @@ for (index, value) in count.enumerated() {
 
 let powerConsumption = Int(gammaRate.joined(), radix: 2)! * Int(epsilonRate.joined(), radix: 2)!
 print("Power Consumption:\(powerConsumption)")
+
+///
+/// Part 2
+///
+
+let oxygenGeneratorLevel = 0
+let co2ScrubberRating = 0
+
+/// Erste Stelle aus dem input
+/// Aussortieren nach Bit Criteria
+/// So lange wiederholen und im Binärwert eine Stelle nach rechts rutschen, bis nur ein Ergebnis übrig ist.
+/// Oxygen = most common value --> alles andere weg; wenn beides gleich viel dann mit 1
+/// CO2 = least common value --> wenn beide gleich dann behalten wo 0
+
+for value in gammaRate {
+    var filteredInput = input.filter({ $0.hasPrefix(value)})
+    print(filteredInput.count)
+}
